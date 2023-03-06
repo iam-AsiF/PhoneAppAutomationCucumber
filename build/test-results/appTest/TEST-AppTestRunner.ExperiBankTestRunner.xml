@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AppTestRunner.ExperiBankTestRunner" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-06T13:31:28" hostname="ASIF" time="41.631">
+  <properties/>
+  <testcase name="runScenario[0](&quot;user login&quot;, &quot;Optional[AppTest]&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="21.643"/>
+  <testcase name="runScenario[1](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="19.985"/>
+  <system-out><![CDATA[
+@login
+Scenario Outline: user login              # src/test/resources/Features/EB1Login.feature:11
+  Given app apk is there                  # AppStepDefinition.EB1LoginStepDefs.appApkIsThere()
+  When user enters 'company'and 'company' # AppStepDefinition.EB1LoginStepDefs.userEntersUsernameAndPass(java.lang.String,java.lang.String)
+Ta Da!!
+  Then user will navigate to home screen  # AppStepDefinition.EB1LoginStepDefs.userWillNavigateToHomeScreen()
+
+@makePayment
+Scenario Outline:                                              # src/test/resources/Features/EB2MakePayment.feature:12
+  Given user clicks on thr make payment tab                    # AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnThrMakePaymentTab()
+  When user inserts '12345' and 'john' and '100'               # AppStepDefinition.EB2MakePaymentStepDefs.userInsertsPhoneAndNameAndAmount(java.lang.String,java.lang.String,java.lang.String)
+  And user selects country                                     # AppStepDefinition.EB2MakePaymentStepDefs.userSelectsCountry()
+  And user clicks on send payment button                       # AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnSendPaymentButton()
+  Then user closes the alert selecting ok and confirms payment # AppStepDefinition.EB2MakePaymentStepDefs.userClosesTheAlertSelectingOkAndConfirmsPayment()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>
