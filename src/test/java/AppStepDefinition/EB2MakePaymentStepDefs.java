@@ -25,7 +25,7 @@ public class EB2MakePaymentStepDefs {
 
     @And("user selects country")
     public void userSelectsCountry() throws InterruptedException {
-        app.selectCountry();
+        app.selectCountryPayment();
     }
 
     @And("user clicks on send payment button")
@@ -34,7 +34,7 @@ public class EB2MakePaymentStepDefs {
     }
 
     @Then("user closes the alert selecting ok and confirms payment")
-    public void userClosesTheAlertSelectingOkAndConfirmsPayment() {
+    public void userClosesTheAlertSelectingOkAndConfirmsPayment() throws InterruptedException {
         app.AlertForPayment();
     }
 }

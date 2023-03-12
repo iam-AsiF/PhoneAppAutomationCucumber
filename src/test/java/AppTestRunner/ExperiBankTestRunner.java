@@ -5,10 +5,11 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        tags = "@login or @makePayment",
+        tags = "@login or @makePayment or @mortgageRequest",
 
         features = {"src/test/resources/Features/EB1Login.feature",
-        "src/test/resources/Features/EB2MakePayment.feature"},
+                "src/test/resources/Features/EB2MakePayment.feature",
+                "src/test/resources/Features/EB3MortgageRequest.feature"},
 
         glue = {"AppStepDefinition"},
 

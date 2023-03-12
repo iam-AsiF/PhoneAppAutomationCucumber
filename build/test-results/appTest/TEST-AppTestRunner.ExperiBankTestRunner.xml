@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTestRunner.ExperiBankTestRunner" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-06T13:31:28" hostname="ASIF" time="41.631">
+<testsuite name="AppTestRunner.ExperiBankTestRunner" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-03-12T09:11:43" hostname="ASIF" time="83.468">
   <properties/>
-  <testcase name="runScenario[0](&quot;user login&quot;, &quot;Optional[AppTest]&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="21.643"/>
-  <testcase name="runScenario[1](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="19.985"/>
+  <testcase name="runScenario[0](&quot;user login&quot;, &quot;Optional[AppTest]&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="23.648"/>
+  <testcase name="runScenario[1](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="20.2"/>
+  <testcase name="runScenario[2](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="39.617"/>
   <system-out><![CDATA[
 @login
 Scenario Outline: user login              # src/test/resources/Features/EB1Login.feature:11
@@ -18,6 +19,19 @@ Scenario Outline:                                              # src/test/resour
   And user selects country                                     # AppStepDefinition.EB2MakePaymentStepDefs.userSelectsCountry()
   And user clicks on send payment button                       # AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnSendPaymentButton()
   Then user closes the alert selecting ok and confirms payment # AppStepDefinition.EB2MakePaymentStepDefs.userClosesTheAlertSelectingOkAndConfirmsPayment()
+
+@mortgageRequest
+Scenario Outline:                                         # src/test/resources/Features/EB3MortgageRequest.feature:16
+  Given user clicks on the mortgage request tab           # AppStepDefinition.EB3MortgageRequestStepDefs.userClicksOnTheMortgageRequestTab()
+  When user inserts 'john' and 'test'                     # AppStepDefinition.EB3MortgageRequestStepDefs.userInsertsFirstNameAndLastName(java.lang.String,java.lang.String)
+  And user selects '30' and 'road 19' and 'Banani'        # AppStepDefinition.EB3MortgageRequestStepDefs.userSelectsAgeAndAddressAndAddress(java.lang.String,java.lang.String,java.lang.String)
+  And selects country for mortgage                        # AppStepDefinition.EB3MortgageRequestStepDefs.selectsCountryForMortgage()
+  And press next button                                   # AppStepDefinition.EB3MortgageRequestStepDefs.pressNextButton()
+  And selects type of loan from dropdown                  # AppStepDefinition.EB3MortgageRequestStepDefs.selectsTypeOfLoanFromDropdown()
+  And selects number of years from dropdown               # AppStepDefinition.EB3MortgageRequestStepDefs.selectsNumberOfYearsFromDropdown()
+  And selects type of occupation from dropdown            # AppStepDefinition.EB3MortgageRequestStepDefs.selectsTypeOfOccupationFromDropdown()
+  And selects yearly income from dropdown                 # AppStepDefinition.EB3MortgageRequestStepDefs.selectsYearlyIncomeFromDropdown()
+  Then closes mortgage payment by clicking on save button # AppStepDefinition.EB3MortgageRequestStepDefs.closesMortgagePaymentByClickingOnSaveButton()
 ]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
