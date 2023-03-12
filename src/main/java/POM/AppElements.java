@@ -63,7 +63,7 @@ public class AppElements {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.xpath("//*[@text='Select']")).click();
         // using touchScroll method until an Element is visible
-        Thread.sleep(2000); // need fixed wait here
+        Thread.sleep(1500); // need fixed wait here
         for (int i = 0; i < 2; i++) {
             swipeScreen();
         }
@@ -79,13 +79,13 @@ public class AppElements {
     }
 
     public void AlertForPayment() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1500);
         driver.switchTo().alert().accept();
     }
 
     // Mortgage Request
     public void mortgageRequest() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1500);
         driver.findElement(By.xpath("//*[@text='Mortgage Request']")).click();
     }
 
@@ -107,7 +107,7 @@ public class AppElements {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.xpath("//*[@text='Select']")).click();
         // using touchScroll method until an Element is visible
-        Thread.sleep(2000); // need fixed wait here
+        Thread.sleep(1500); // need fixed wait here
         for (int i = 0; i < 2; i++) {
             swipeScreen();
         }
@@ -145,7 +145,36 @@ public class AppElements {
         Thread.sleep(1500);
         driver.findElement(By.xpath("//*[@text='Save']")).click();
         Thread.sleep(1500);
+    }
+
+    // Expense report tav
+    public void expenseReport() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@text='Expense Report']")).click();
+        Thread.sleep(1500);
+    }
+
+    public void addExpense() throws InterruptedException {
+        // adding two - clicking on the add button
+        for (int i = 0; i < 2; i++) {
+            driver.findElement(By.xpath("//*[@text='Add']")).click();
+        }
+        Thread.sleep(1500);
+    }
+
+    public void removeExpense() {
+        // removing one - by clicking on any of them
+        driver.findElement(By.xpath("//*[@text='Expense : 3']")).click();
+    }
+
+    public void backAndLogOut() throws InterruptedException {
+        // back button
+        driver.findElement(By.xpath("//*[@text='Back']")).click();
+        Thread.sleep(1500);
+        // logout button
+        driver.findElement(By.xpath("//*[@text='Logout']")).click();
+        Thread.sleep(1500);
         driver.closeApp();
     }
+
 }
 

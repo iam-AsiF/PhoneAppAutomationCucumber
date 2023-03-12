@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTestRunner.ExperiBankTestRunner" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-03-12T09:11:43" hostname="ASIF" time="83.468">
+<testsuite name="AppTestRunner.ExperiBankTestRunner" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-12T13:12:59" hostname="ASIF" time="90.088">
   <properties/>
-  <testcase name="runScenario[0](&quot;user login&quot;, &quot;Optional[AppTest]&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="23.648"/>
-  <testcase name="runScenario[1](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="20.2"/>
-  <testcase name="runScenario[2](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="39.617"/>
+  <testcase name="runScenario[0](&quot;user login&quot;, &quot;Optional[AppTest]&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="23.049"/>
+  <testcase name="runScenario[1](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="19.739"/>
+  <testcase name="runScenario[2](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="38.733"/>
+  <testcase name="runScenario[3](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="8.563"/>
   <system-out><![CDATA[
 @login
 Scenario Outline: user login              # src/test/resources/Features/EB1Login.feature:11
@@ -32,6 +33,13 @@ Scenario Outline:                                         # src/test/resources/F
   And selects type of occupation from dropdown            # AppStepDefinition.EB3MortgageRequestStepDefs.selectsTypeOfOccupationFromDropdown()
   And selects yearly income from dropdown                 # AppStepDefinition.EB3MortgageRequestStepDefs.selectsYearlyIncomeFromDropdown()
   Then closes mortgage payment by clicking on save button # AppStepDefinition.EB3MortgageRequestStepDefs.closesMortgagePaymentByClickingOnSaveButton()
+
+@expenseReport
+Scenario:                                            # src/test/resources/Features/EB4ExpenseReport.feature:3
+  Given user taps on the expense report button       # AppStepDefinition.EB4ExpenseReportStepDefs.userTapsOnTheExpenseReportButton()
+  When user adds two  expense report                 # AppStepDefinition.EB4ExpenseReportStepDefs.userAddsTwoExpenseReport()
+  And removes one report                             # AppStepDefinition.EB4ExpenseReportStepDefs.removesOneReport()
+  Then user goes back and logs out and quits the app # AppStepDefinition.EB4ExpenseReportStepDefs.userGoesBackAndLogsOutAndQuitsTheApp()
 ]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
