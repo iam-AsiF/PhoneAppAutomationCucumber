@@ -9,13 +9,46 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">cucumber</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">90,725</td><td></td><td></td></tr>
+<tr><td><a href="#t0">cucumber</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">35,353</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">cucumber &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">AppTestRunner.ExperiBankTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="4">1678626779225</td><td rowspan="4">23049</td></tr><tr class="passedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">cucumber &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">AppTestRunner.ExperiBankTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="4">1685379205590</td><td rowspan="4">6</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m3">runScenario</a></td></tr></tbody>
 </table>
-<h2>cucumber</h2><h3 id="m0">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;user login&quot;</td><td>&quot;Optional[AppTest]&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Optional.empty&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Optional.empty&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Optional.empty&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>cucumber</h2><h3 id="m0">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Optional.empty&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException
+	at POM.AppElements.expenseReport(AppElements.java:154)
+	at AppStepDefinition.EB4ExpenseReportStepDefs.userTapsOnTheExpenseReportButton(EB4ExpenseReportStepDefs.java:17)
+	at ✽.user taps on the expense report button(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB4ExpenseReport.feature:4)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;user login&quot;</td><td>&quot;Optional[AppTest]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
+Host info: host: &apos;ASIF&apos;, ip: &apos;192.168.0.103&apos;
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:appActivity=.LoginActivity, appium:appPackage=com.experitest.ExperiBank, appium:deviceName=adb:SM-J700H, platformName=ANDROID, appium:platformVersion=6.0, appium:udid=3300a9bf997622c3}], desiredCapabilities=Capabilities {appActivity: .LoginActivity, appPackage: com.experitest.ExperiBank, deviceName: adb:SM-J700H, platformName: ANDROID, platformVersion: 6.0, udid: 3300a9bf997622c3}}]
+Capabilities {}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
+	at Core.Helper.apkLaunch(Helper.java:26)
+	at AppStepDefinition.EB1LoginStepDefs.appApkIsThere(EB1LoginStepDefs.java:18)
+	at ✽.app apk is there(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB1Login.feature:5)
+... Removed 4 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Optional.empty&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException
+	at POM.AppElements.makePaymentTab(AppElements.java:50)
+	at AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnThrMakePaymentTab(EB2MakePaymentStepDefs.java:18)
+	at ✽.user clicks on thr make payment tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB2MakePayment.feature:5)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">AppTestRunner.ExperiBankTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Optional.empty&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException
+	at POM.AppElements.mortgageRequest(AppElements.java:91)
+	at AppStepDefinition.EB3MortgageRequestStepDefs.userClicksOnTheMortgageRequestTab(EB3MortgageRequestStepDefs.java:18)
+	at ✽.user clicks on the mortgage request tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB3MortgageRequest.feature:4)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

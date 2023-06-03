@@ -15,14 +15,15 @@ public class Helper {
     static AndroidDriver driver;
 
     public AndroidDriver apkLaunch() throws MalformedURLException, InterruptedException {
-        dc.setCapability(MobileCapabilityType.UDID, "299edc22");
+        dc.setCapability(MobileCapabilityType.UDID, "3300a9bf997622c3"); //cmd - adb devices
         dc.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-        dc.setCapability(MobileCapabilityType.DEVICE_NAME, "SAMSUNG-SM-G930A");
-        dc.setCapability("platformVersion", "8.0");
+        dc.setCapability(MobileCapabilityType.DEVICE_NAME, "adb:SM-J700H");
+        dc.setCapability("platformVersion", "11.0");
         dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
         dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
+        // mFocus -- to get specific page activity -- cmd > adb shell > dumpsys window | grep -E "mCurrentFocus|mFocusedApp"
         Thread.sleep(6000);
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), dc);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4725/wd/hub"), dc);
         return driver;
     }
 

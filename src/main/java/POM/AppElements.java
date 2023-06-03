@@ -36,8 +36,11 @@ public class AppElements {
     }
 
     // login
-    public void login(String userName, String password) {
+    public void login(String userName, String password) throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.findElement(By.xpath("//*[@text='OK']")).click();
+        // for older version OK button will not appear, so we can ignore it there
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//*[@text='Username']")).sendKeys(userName);
         driver.findElement(By.xpath("//*[@text='Password']")).sendKeys(password);
         driver.findElement(By.xpath("//*[@text='Login']")).click();

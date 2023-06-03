@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="90725" started-at="2023-03-12T19:12:58 BDT" finished-at="2023-03-12T19:14:29 BDT">
+  <suite name="Suite" duration-ms="35353" started-at="2023-05-29T22:52:50 BDT" finished-at="2023-05-29T22:53:25 BDT">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="cucumber" duration-ms="90725" started-at="2023-03-12T19:12:58 BDT" finished-at="2023-03-12T19:14:29 BDT">
+    <test name="cucumber" duration-ms="35353" started-at="2023-05-29T22:52:50 BDT" finished-at="2023-05-29T22:53:25 BDT">
       <class name="AppTestRunner.ExperiBankTestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="setUpClass" is-config="true" duration-ms="543" started-at="2023-03-12T19:12:58 BDT" finished-at="2023-03-12T19:12:59 BDT">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="setUpClass" is-config="true" duration-ms="509" started-at="2023-05-29T22:52:50 BDT" finished-at="2023-05-29T22:52:50 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="23049" started-at="2023-03-12T19:12:59 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T19:13:22 BDT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="33226" started-at="2023-05-29T22:52:50 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-29T22:53:24 BDT">
           <params>
             <param index="0">
               <value>
@@ -27,10 +27,49 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
+Host info: host: 'ASIF', ip: '192.168.0.103'
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:appActivity=.LoginActivity, appium:appPackage=com.experitest.ExperiBank, appium:deviceName=adb:SM-J700H, platformName=ANDROID, appium:platformVersion=6.0, appium:udid=3300a9bf997622c3}], desiredCapabilities=Capabilities {appActivity: .LoginActivity, appPackage: com.experitest.ExperiBank, deviceName: adb:SM-J700H, platformName: ANDROID, platformVersion: 6.0, udid: 3300a9bf997622c3}}]
+Capabilities {}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
+Host info: host: 'ASIF', ip: '192.168.0.103'
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:appActivity=.LoginActivity, appium:appPackage=com.experitest.ExperiBank, appium:deviceName=adb:SM-J700H, platformName=ANDROID, appium:platformVersion=6.0, appium:udid=3300a9bf997622c3}], desiredCapabilities=Capabilities {appActivity: .LoginActivity, appPackage: com.experitest.ExperiBank, deviceName: adb:SM-J700H, platformName: ANDROID, platformVersion: 6.0, udid: 3300a9bf997622c3}}]
+Capabilities {}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
+at Core.Helper.apkLaunch(Helper.java:26)
+at AppStepDefinition.EB1LoginStepDefs.appApkIsThere(EB1LoginStepDefs.java:18)
+at ✽.app apk is there(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB1Login.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="19739" started-at="2023-03-12T19:13:22 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T19:13:42 BDT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="10" started-at="2023-05-29T22:53:24 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-29T22:53:24 BDT">
           <params>
             <param index="0">
               <value>
@@ -43,10 +82,19 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at POM.AppElements.makePaymentTab(AppElements.java:50)
+at AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnThrMakePaymentTab(EB2MakePaymentStepDefs.java:18)
+at ✽.user clicks on thr make payment tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB2MakePayment.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="38733" started-at="2023-03-12T19:13:42 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T19:14:20 BDT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="1529" started-at="2023-05-29T22:53:24 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-29T22:53:25 BDT">
           <params>
             <param index="0">
               <value>
@@ -59,10 +107,19 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at POM.AppElements.mortgageRequest(AppElements.java:91)
+at AppStepDefinition.EB3MortgageRequestStepDefs.userClicksOnTheMortgageRequestTab(EB3MortgageRequestStepDefs.java:18)
+at ✽.user clicks on the mortgage request tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB3MortgageRequest.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="8563" started-at="2023-03-12T19:14:20 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-12T19:14:29 BDT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="runScenario" duration-ms="6" started-at="2023-05-29T22:53:25 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-29T22:53:25 BDT">
           <params>
             <param index="0">
               <value>
@@ -75,10 +132,19 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at POM.AppElements.expenseReport(AppElements.java:154)
+at AppStepDefinition.EB4ExpenseReportStepDefs.userTapsOnTheExpenseReportButton(EB4ExpenseReportStepDefs.java:17)
+at ✽.user taps on the expense report button(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB4ExpenseReport.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="tearDownClass" is-config="true" duration-ms="55" started-at="2023-03-12T19:14:29 BDT" finished-at="2023-03-12T19:14:29 BDT">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:AppTestRunner.ExperiBankTestRunner@192d43ce]" name="tearDownClass" is-config="true" duration-ms="41" started-at="2023-05-29T22:53:25 BDT" finished-at="2023-05-29T22:53:25 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

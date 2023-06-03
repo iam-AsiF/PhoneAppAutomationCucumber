@@ -1,21 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTestRunner.ExperiBankTestRunner" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-12T13:12:59" hostname="ASIF" time="90.088">
+<testsuite name="AppTestRunner.ExperiBankTestRunner" tests="4" skipped="0" failures="4" errors="0" timestamp="2023-05-29T16:52:50" hostname="ASIF" time="34.774">
   <properties/>
-  <testcase name="runScenario[0](&quot;user login&quot;, &quot;Optional[AppTest]&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="23.049"/>
-  <testcase name="runScenario[1](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="19.739"/>
-  <testcase name="runScenario[2](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="38.733"/>
-  <testcase name="runScenario[3](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="8.563"/>
+  <testcase name="runScenario[0](&quot;user login&quot;, &quot;Optional[AppTest]&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="33.226">
+    <failure message="org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. &#10;Host info: host: 'ASIF', ip: '192.168.0.103'&#10;Build info: version: '4.7.0', revision: '0a5b49d16f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Command: [null, newSession {capabilities=[{appium:appActivity=.LoginActivity, appium:appPackage=com.experitest.ExperiBank, appium:deviceName=adb:SM-J700H, platformName=ANDROID, appium:platformVersion=6.0, appium:udid=3300a9bf997622c3}], desiredCapabilities=Capabilities {appActivity: .LoginActivity, appPackage: com.experitest.ExperiBank, deviceName: adb:SM-J700H, platformName: ANDROID, platformVersion: 6.0, udid: 3300a9bf997622c3}}]&#10;Capabilities {}" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
+Host info: host: 'ASIF', ip: '192.168.0.103'
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:appActivity=.LoginActivity, appium:appPackage=com.experitest.ExperiBank, appium:deviceName=adb:SM-J700H, platformName=ANDROID, appium:platformVersion=6.0, appium:udid=3300a9bf997622c3}], desiredCapabilities=Capabilities {appActivity: .LoginActivity, appPackage: com.experitest.ExperiBank, deviceName: adb:SM-J700H, platformName: ANDROID, platformVersion: 6.0, udid: 3300a9bf997622c3}}]
+Capabilities {}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
+	at Core.Helper.apkLaunch(Helper.java:26)
+	at AppStepDefinition.EB1LoginStepDefs.appApkIsThere(EB1LoginStepDefs.java:18)
+	at ✽.app apk is there(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB1Login.feature:5)
+</failure>
+  </testcase>
+  <testcase name="runScenario[1](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="0.01">
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at POM.AppElements.makePaymentTab(AppElements.java:50)
+	at AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnThrMakePaymentTab(EB2MakePaymentStepDefs.java:18)
+	at ✽.user clicks on thr make payment tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB2MakePayment.feature:5)
+</failure>
+  </testcase>
+  <testcase name="runScenario[2](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="1.529">
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at POM.AppElements.mortgageRequest(AppElements.java:91)
+	at AppStepDefinition.EB3MortgageRequestStepDefs.userClicksOnTheMortgageRequestTab(EB3MortgageRequestStepDefs.java:18)
+	at ✽.user clicks on the mortgage request tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB3MortgageRequest.feature:4)
+</failure>
+  </testcase>
+  <testcase name="runScenario[3](&quot;&quot;, &quot;Optional.empty&quot;)" classname="AppTestRunner.ExperiBankTestRunner" time="0.006">
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at POM.AppElements.expenseReport(AppElements.java:154)
+	at AppStepDefinition.EB4ExpenseReportStepDefs.userTapsOnTheExpenseReportButton(EB4ExpenseReportStepDefs.java:17)
+	at ✽.user taps on the expense report button(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB4ExpenseReport.feature:4)
+</failure>
+  </testcase>
   <system-out><![CDATA[
 @login
 Scenario Outline: user login              # src/test/resources/Features/EB1Login.feature:11
   Given app apk is there                  # AppStepDefinition.EB1LoginStepDefs.appApkIsThere()
+      org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
+Host info: host: 'ASIF', ip: '192.168.0.103'
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:appActivity=.LoginActivity, appium:appPackage=com.experitest.ExperiBank, appium:deviceName=adb:SM-J700H, platformName=ANDROID, appium:platformVersion=6.0, appium:udid=3300a9bf997622c3}], desiredCapabilities=Capabilities {appActivity: .LoginActivity, appPackage: com.experitest.ExperiBank, deviceName: adb:SM-J700H, platformName: ANDROID, platformVersion: 6.0, udid: 3300a9bf997622c3}}]
+Capabilities {}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
+	at Core.Helper.apkLaunch(Helper.java:26)
+	at AppStepDefinition.EB1LoginStepDefs.appApkIsThere(EB1LoginStepDefs.java:18)
+	at âœ½.app apk is there(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB1Login.feature:5)
+
   When user enters 'company'and 'company' # AppStepDefinition.EB1LoginStepDefs.userEntersUsernameAndPass(java.lang.String,java.lang.String)
-Ta Da!!
   Then user will navigate to home screen  # AppStepDefinition.EB1LoginStepDefs.userWillNavigateToHomeScreen()
 
 @makePayment
 Scenario Outline:                                              # src/test/resources/Features/EB2MakePayment.feature:12
   Given user clicks on thr make payment tab                    # AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnThrMakePaymentTab()
+      java.lang.NullPointerException
+	at POM.AppElements.makePaymentTab(AppElements.java:50)
+	at AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnThrMakePaymentTab(EB2MakePaymentStepDefs.java:18)
+	at âœ½.user clicks on thr make payment tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB2MakePayment.feature:5)
+
   When user inserts '12345' and 'john' and '100'               # AppStepDefinition.EB2MakePaymentStepDefs.userInsertsPhoneAndNameAndAmount(java.lang.String,java.lang.String,java.lang.String)
   And user selects country                                     # AppStepDefinition.EB2MakePaymentStepDefs.userSelectsCountry()
   And user clicks on send payment button                       # AppStepDefinition.EB2MakePaymentStepDefs.userClicksOnSendPaymentButton()
@@ -24,6 +99,11 @@ Scenario Outline:                                              # src/test/resour
 @mortgageRequest
 Scenario Outline:                                         # src/test/resources/Features/EB3MortgageRequest.feature:16
   Given user clicks on the mortgage request tab           # AppStepDefinition.EB3MortgageRequestStepDefs.userClicksOnTheMortgageRequestTab()
+      java.lang.NullPointerException
+	at POM.AppElements.mortgageRequest(AppElements.java:91)
+	at AppStepDefinition.EB3MortgageRequestStepDefs.userClicksOnTheMortgageRequestTab(EB3MortgageRequestStepDefs.java:18)
+	at âœ½.user clicks on the mortgage request tab(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB3MortgageRequest.feature:4)
+
   When user inserts 'john' and 'test'                     # AppStepDefinition.EB3MortgageRequestStepDefs.userInsertsFirstNameAndLastName(java.lang.String,java.lang.String)
   And user selects '30' and 'road 19' and 'Banani'        # AppStepDefinition.EB3MortgageRequestStepDefs.userSelectsAgeAndAddressAndAddress(java.lang.String,java.lang.String,java.lang.String)
   And selects country for mortgage                        # AppStepDefinition.EB3MortgageRequestStepDefs.selectsCountryForMortgage()
@@ -37,6 +117,11 @@ Scenario Outline:                                         # src/test/resources/F
 @expenseReport
 Scenario:                                            # src/test/resources/Features/EB4ExpenseReport.feature:3
   Given user taps on the expense report button       # AppStepDefinition.EB4ExpenseReportStepDefs.userTapsOnTheExpenseReportButton()
+      java.lang.NullPointerException
+	at POM.AppElements.expenseReport(AppElements.java:154)
+	at AppStepDefinition.EB4ExpenseReportStepDefs.userTapsOnTheExpenseReportButton(EB4ExpenseReportStepDefs.java:17)
+	at âœ½.user taps on the expense report button(file:///D:/Apps/Programming%20Language/Selenium/E2EAutomation/PhoneAppAutomationCucumber/src/test/resources/Features/EB4ExpenseReport.feature:4)
+
   When user adds two  expense report                 # AppStepDefinition.EB4ExpenseReportStepDefs.userAddsTwoExpenseReport()
   And removes one report                             # AppStepDefinition.EB4ExpenseReportStepDefs.removesOneReport()
   Then user goes back and logs out and quits the app # AppStepDefinition.EB4ExpenseReportStepDefs.userGoesBackAndLogsOutAndQuitsTheApp()
